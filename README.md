@@ -1,8 +1,5 @@
-# Internal AWS Gitlab/AWS Codecommit mirroring
+# Gitlab/AWS Codecommit mirroring
 
-This tutorial and the CloudFormation stack is intended to help AWS employees to set up mirroring between our [internal Gitlab](https://gitlab.aws.dev/) and AWS CodeCommit on their AWS account.
-
-The problem with Gitlab is that most of the CI/CD pipelines we have are built on top of AWS CodeCommit.
 
 This small solution can help you to leverge your existing CI/CD pipeline in your AWS account and the same time use Gitlab as your main source code repository. You can choose to mirror your repository to an **existing empty** AWS CodeCommit repository or you can **create a new** one automatically.
 
@@ -10,7 +7,7 @@ This small solution can help you to leverge your existing CI/CD pipeline in your
 
 * Since all the resources are created using CloudFormation, it's easy to remove it. _(Note: by default it will also delete the AWS CodeCommit repository upon deletion if it was created by the stack)_
 * The user has minimal privilige. It's only allowed to push and pull from the target repository. Nothing more.
-* The user will not have any AWS Access keys. _(you can also import the IAM user to Isengard)_
+* The user will not have any AWS Access keys. 
 
 ## Setup (~ 5 minutes)
 
@@ -52,4 +49,3 @@ If you have any issues or you found a bug, you can create a new Issue in Gitlab.
 
 If you want to submit improvements, feel free to send in a Merge Request.
 
-If you want to provide constructive feedback, you can message the new owner of this, Viji on [Slack](https://slack.com/app_redirect?channel=@vijrvic). _[(Check out this first)](https://www.nohello.com/)_
